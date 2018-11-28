@@ -1,0 +1,80 @@
+.maindiv{
+  background: aqua;
+  margin:3%;
+  display:flex;
+
+}
+.leftdiv{
+  background: pink;
+  margin:3%;
+  border-radius: 5px;
+  box-shadow:4px 4px 4px 4px;
+  height:70%;
+  width:25%;
+  text-align: center;
+  position: fixed;
+  }
+.rightdiv{
+  background:Bisque;
+  margin: 3%;
+  height:100%;
+  width:65%;
+  margin:3%;
+  margin-left: 35%;
+  padding: 2%;
+
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 4px;
+}
+img{
+  margin:3%;
+  height: 50%;
+  width:50%;
+}
+/* table,th,td{
+border:1px solid black;
+}
+tr:nth-child(even){
+  background-color: pink;
+} */
+@media screen and (max-width:480px) {
+  .maindiv{
+    background: pink;
+    margin:1%;
+    display: inline-block;
+    justify-content: space-between;
+  }
+  .leftdiv{
+    background: aqua;
+    margin:0;
+    border-radius: 5px;
+    box-shadow:4px 4px 4px 4px;
+    height:50%;
+    width:100%;
+    text-align: center;
+    position:relative;
+    }
+  .rightdiv{
+    background:Lightgreen;
+    margin:0;
+    height:100%;
+    width:100%;
+    margin:0;
+    margin-top:4%;
+    padding: 2%;
+
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 4px;
+  }
+  img{
+    margin:3%;
+    height: 50%;
+    width:50%;
+  }
+  /* table,th,td{
+  border:1px solid black;
+  }
+  tr:nth-child(even){
+    background-color: pink;
+  } */
+}
