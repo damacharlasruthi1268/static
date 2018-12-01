@@ -1,0 +1,42 @@
+{
+  "career":{
+    "info":"to work in the envinorment"
+  },
+  "education":[
+    {
+      "degree":"B.tech(it)",
+      "institution":"vignan nirula",
+      "year of passing":"2020",
+      "gpa":"7.5"
+    },
+    {
+      "degree":"inter",
+      "institution":"chaitanya",
+      "year of passing":"2016",
+      "gpa":"93%"
+    },
+    {
+      "degree":"ssc",
+      "institution":"indian springs",
+      "year of passing":"2014",
+      "gpa":"88%"
+    }
+  ],
+  "skills":[
+  {
+    "title":"platforms",
+    "content":"windows,linux"
+  },
+  {
+    "title":"programming languages",
+    "content":"c,java"
+  },
+  {
+    "title":"data base",
+    "content":"my sql"
+  }
+],
+"languages":"telugu,english,hindi"
+
+
+}

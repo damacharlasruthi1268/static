@@ -35,8 +35,8 @@ function getfile(file,callback){
   var xhr=new XMLHttpRequest();
   xhr.overrideMimeType("application/json");
   xhr.open("GET",file,true);
-  xhr.onreadyStatechange=function(){
-    if(xhr.readtState===4 && xhr.status=="200"){
+  xhr.onreadystatechange=function(){
+    if(xhr.readyState===4 && xhr.status=="200"){
       callback(xhr.responseText);
 
     }
@@ -44,42 +44,61 @@ function getfile(file,callback){
   xhr.send(null);
 }
 getfile("dynamic.json",function(text){
-Let data=JSON.parse(text);
+let data=JSON.parse(text);
 console.log(data);
+career(data.career);
+education(data.education);
+skills(data.skills);
 })
-var child2=document.querySelector("#child2")
+var rightchild=document.querySelector(".rightchild")
 function career(c){
   var chead=document.createElement("h2");
   chead.textContent="career objective"
-  child2.appendChild(chead);
+  rightchild.appendChild(chead);
 
   var chr=document.createElement("hr")
-  child2.appendChild(chr);
+  rightchild.appendChild(chr);
 
   var cp=document.createElement("p")
   cp.textContent=c.info;
-  child2.appendChild(cp);
+  rightchild.appendChild(cp);
 
 }
 function education(edu){
   var ehead=document.createElement("h2")
   ehead.textContent="educational details";
-  child2.appendChild(ehead);
+  rightchild.appendChild(ehead);
 
   var ehr=document.createElement("hr")
-  child2.appendChild(ehr);
+  rightchild.appendChild(ehr);
 
 
-  Let etable=document.createElement("table");
+  let etable=document.createElement("table");
   etable.border="1";
 
   var tr1="<tr><td>degree</td><td>institution</td><td>year of passing</td><td>gpa</td></tr>;"
   var tr2="";
   for(i=0;i<edu.length;i++){
-    tr2=tr2+1+"<tr><td>"+edu[i].degree+"</td><td>"+edu[i].institution+"</td><td>"+edu[i].yearofpassing+0"</td><td>"+edu[i].percentation+"</td></tr>";
+    tr2=tr2+1+"<tr><td>"+edu[i].degree+"</td><td>"+edu[i].institution+"</td><td>"+edu[i].yearofpassing+"</td><td>"+edu[i].percentation+"</td></tr>";
 
 
   }
   etable.innerHTML=tr1+tr2;
-  child2.appendchild(etable);
+  rightchild.appendChild(etable);
+}
+function skills(sk){
+  var shead=document.createElement("h2")
+  shead.textContent="skills";
+  rightchild.appendChild(shead);
+
+  var shr=document.createElement("hr")
+  rightchild.appendChild(shr);
+
+  var ul=document.createElement("ul");
+rightchild.appendChild(ul);
+  for(i=0;i<sk.length;i++){
+    var li=document.createElement("li");
+    li.textContent=sk[i].title+":"+sk[i].content;
+    ul.appendChild(li);
+  }
 }

@@ -1,0 +1,17 @@
+body{
+  background: grey;
+}
+.maindiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+a{
+  font-size: 20%;
+}
+img{
+  border-radius: 50%;
+  border: 2px solid black;
+  display: block;
+  margin: auto;
+}
